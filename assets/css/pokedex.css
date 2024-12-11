@@ -6,16 +6,25 @@
     list-style: none;
 }
 
+.pokedextext{
+    display: block; /* Garante que a imagem seja tratada como um elemento de bloco */
+    margin: 0 auto; /* Centraliza a imagem horizontalmente */
+    text-align: center; /* Garante que qualquer conteúdo dentro seja centralizado */
+    max-width: 50%; /* Ajusta a imagem para ser responsiva */
+    height: auto; /* Mantém a proporção da imagem */
+
+}
+
 .normal {
-    background-color: #a6a877;
+    background-color: #a8a789;
 }
 
 .grass {
-    background-color: #77c850;
+    background-color: #029e31;
 }
 
 .fire {
-    background-color: #ee7f30;
+    background-color: #f46a08;
 }
 
 .water {
@@ -23,15 +32,15 @@
 }
 
 .electric {
-    background-color: #f7cf2e;
+    background-color: #c1a01e;
 }
 
 .ice {
-    background-color: #98d5d7;
+    background-color: #96bdbf;
 }
 
 .ground {
-    background-color: #dfbf69;
+    background-color: #997239;
 }
 
 .flying {
@@ -47,7 +56,7 @@
 }
 
 .psychic {
-    background-color: #f65687;
+    background-color: #ff2d6c;
 }
 
 .dark {
@@ -55,15 +64,15 @@
 }
 
 .rock {
-    background-color: #b8a137;
+    background-color: #646464;
 }
 
 .bug {
-    background-color: #a8b720;
+    background-color: #a9bf2d;
 }
 
 .ghost {
-    background-color: #6e5896;
+    background-color: #3d1e75;
 }
 
 .steel {
@@ -71,19 +80,37 @@
 }
 
 .dragon {
-    background-color: #6f38f6;
+    background-color: #5da57c;
 }
 
 .fairy {
-    background-color: #f9aec7;
+    background-color: #ff7da8;
 }
 
-.pokemon {
+header{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 2rem;
+}
+
+
+.pokemon {   /*caixa de pokemon*/
     display: flex;
     flex-direction: column;
     margin: .5rem;
     padding: 1rem;
     border-radius: 1rem;
+    box-shadow: 0 4px 8px #7d7e7b3c;
+    border: 1px solid;
+    border-color: #1a1919c3;
+}
+
+.pokemon:hover {
+    cursor: pointer; 
+    box-shadow: 0 8px 16px #000000cc; 
+    transform: scale(1.05); 
 }
 
 .pokemon .number {
@@ -105,6 +132,7 @@
     align-items: center;
     justify-content: space-between;
 }
+
 
 .pokemon .detail .types {
     padding: 0;
@@ -137,18 +165,88 @@
 }
 
 .pagination button {
-    padding: .25rem .5rem;
-    margin: .25rem 0;
-    font-size: .625rem;
+    padding: .35rem .9rem;
+    margin: .35rem 0;
+    font-size: .825rem;
     color: #fff;
-    background-color: #6c79db;
+    background-color: #000000;
     border: none;
-    border-radius: 1rem;
+    border-radius: 0.5rem;
+    cursor: pointer;
+}
+
+.modal {
+    display: none; 
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: rgb(255, 255, 255);
+    padding: 30px;
+    border-radius: 20px;
+    box-shadow: 0 4px 8px rgba(94, 92, 92, 0.5);
+    z-index: 1000;
+    border: 1px solid;
+    border-color: #272626;
+    text-transform: capitalize;
+    width: 20rem;
+    height: 30rem;
+    background-repeat: no-repeat; 
+    background-position: bottom center; 
+    background-size: cover; 
+    display: flex;
+    flex-direction: column; 
+    justify-content: flex-end; 
+    overflow: hidden; 
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease, visibility 0.3s ease;
+}
+
+.modal.show {
+    opacity: 1;
+    visibility: visible;
+}
+
+.modal-detail img {
+    max-width: 100%; 
+    max-height: 15rem; 
+    width: auto; 
+    height: auto; 
+    margin-top: auto; 
+    filter: drop-shadow(-4px 4px 20px rgba(0, 0, 0, 1));;
+}
+
+
+.modal-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.close-button {
+    position: fixed; 
+    top: 10px;      
+    right: 10px;     
+    cursor: pointer;
+    padding: 5px;
+    font-size: 1.25rem;
+    color: #161616;
+    background: #f8f8f8;
+    border-radius: 10%;
+    z-index: 1001;  
+}
+
+.close-button:hover {
+    background: #e0e0e0;
 }
 
 @media screen and (min-width: 380px) {
     .pokemons {
         grid-template-columns: 1fr 1fr;
+    }
+    header img {
+        width: 20%;
     }
 }
 
@@ -156,10 +254,30 @@
     .pokemons {
         grid-template-columns: 1fr 1fr 1fr;
     }
+    header img {
+        width: 30%;
+    }
 }
 
 @media screen and (min-width: 992px) {
     .pokemons {
         grid-template-columns: 1fr 1fr 1fr 1fr;
+    }
+}
+
+@media screen and (min-width: 576px) {
+    .pokemons {
+        grid-template-columns: 1fr 1fr 1fr;
+        gap: 10px;
+    }
+    header img {
+        width: 30%;
+    }
+}
+
+@media screen and (min-width: 992px) {
+    .pokemons {
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        gap: 15px;
     }
 }
