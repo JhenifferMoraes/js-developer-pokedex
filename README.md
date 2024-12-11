@@ -1,8 +1,7 @@
 <img width=100% src="https://capsule-render.vercel.app/api?type=waving&color=ffbc1f&height=150&section=header"/>
 
 # <img width=5% src="https://i.pinimg.com/originals/9f/b1/25/9fb125f1fedc8cc62ab5b20699ebd87d.gif"/> Projeto Construindo uma Pokédex com JavaScript
-Neste incrível projeto disponibilizado pela Dio para os participantes do Bootcamp Ri Happy - Front-end do Zero, a principal ideia era aprendermos mais sobre HTML, CSS e JavaScript na prática e fixarmos ainda mais diversos conceitos vistos durante o curso. Nesse projeto era necessario implatarmos a segunda parte de uma Pokedex feita com Api, essa parte consistia em ao clicarmos em um pokemon aparecesse uma aba com suas informações. Também era opcional que cada aluno acrescentasse em seu projeto o seu "próprio toque". Sendo assim, fiz algumas melhorias que vi necessidade durante o desenvolvimento, tanto em questões estéticas quanto de funcionamento.
-
+Neste incrível projeto disponibilizado pela DIO para os participantes do Bootcamp Ri Happy - Front-end do Zero, o principal objetivo era aprender mais sobre HTML, CSS e JavaScript na prática e fixar ainda mais diversos conceitos abordados durante o curso. Nesse projeto, era necessário implementar a segunda parte de uma Pokédex feita com API. Essa etapa consistia em, ao clicarmos em um Pokémon, abrir uma aba com suas informações. Além disso, era opcional que cada aluno acrescentasse ao projeto o seu "próprio toque". Sendo assim, fiz algumas melhorias que julguei necessárias durante o desenvolvimento, tanto em questões estéticas quanto de funcionalidade.
 
 ### <img width=5% src="https://pa1.aminoapps.com/6833/b4e3838ed6df4e4c16b1907028ed352f26a85e56_hq.gif"/> O que foi necessário para realizar este projeto:
 
@@ -28,8 +27,12 @@ Abaixo, deixarei alguns links para downloads oficiais de tudo o que foi utilizad
  PokéAPI - https://pokeapi.co/
 ```
 ### 🪄 Imagens do Projeto
+
+### Pagina Principal
 <img width=100% src="./assets/img/pokedex.jpg"/>
-<img width=30% src="./assets/img/2.jpg"/>
+
+### Aba com as informações dos pokemos
+<img width=100% src="./assets/img/pokedexcaixas.jpg"/>
 
 <img width=100% src="https://capsule-render.vercel.app/api?type=waving&color=ffbc1f&height=100&section=footer"/>
 
